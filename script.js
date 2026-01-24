@@ -1,139 +1,16 @@
-* {
-  box-sizing: border-box;
-}
+let credits = 1000;
 
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont;
-  background: #0b0e11;
-  color: #eaeaea;
-}
+function buy(item, price) {
+  if (credits < price) {
+    alert("Not enough credits");
+    return;
+  }
 
-/* HERO */
-.hero {
-  min-height: 90vh;
-  background: radial-gradient(circle at top, #00ffd5, #001a1f);
-  color: #001010;
-  padding: 30px 60px;
-}
+  credits -= price;
+  document.getElementById("credits").textContent = credits;
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  const log = document.getElementById("log");
+  const li = document.createElement("li");
+  li.textContent = `✓ ${item} purchased for ${price} credits`;
+  log.prepend(li);
 }
-
-.nav h1 {
-  margin: 0;
-  font-size: 1.6rem;
-}
-
-.credits {
-  font-weight: 600;
-}
-
-.hero-content {
-  margin-top: 120px;
-  max-width: 600px;
-}
-
-.hero-content h2 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-.hero-content p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
-
-.cta {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 14px 28px;
-  border-radius: 30px;
-  background: black;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* ABOUT */
-.about {
-  padding: 80px 20px;
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-}
-
-.about h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/* STORE */
-.store {
-  padding: 80px 40px;
-}
-
-.store h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 50px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  background: linear-gradient(180deg, #161b22, #0f1318);
-  border-radius: 20px;
-  padding: 30px;
-  text-align: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(0, 255, 213, 0.25);
-}
-
-.card h3 {
-  margin-top: 0;
-}
-
-.price {
-  display: block;
-  margin: 15px 0;
-  font-weight: bold;
-  color: #00ffd5;
-}
-
-button {
-  padding: 12px 24px;
-  border-radius: 25px;
-  border: none;
-  background: #00ffd5;
-  color: #001010;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* LOG */
-.log {
-  padding: 60px 20px;
-  max-width: 600px;
-  margin: auto;
-}
-
-.log ul {
-  list-style: none;
-  padding: 0;
-}
-
-.log li {
-  padding: 10px 0;
-  border-
