@@ -7,24 +7,74 @@
 </head>
 <body>
 
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <h1>MixKit</h1>
+    <div class="credits">💰 Credits: <span id="credits">1000</span></div>
+  </div>
+
   <!-- HERO -->
-  <header class="hero">
-    <nav class="nav">
-      <h1>MixKit</h1>
-      <div class="credits">💰 <span id="credits">1000</span> credits</div>
-    </nav>
-
-    <div class="hero-content">
-      <h2>The Ultimate Blending Kit</h2>
-      <p>Everything you need to blend smarter, faster, and anywhere.</p>
-      <a href="#store" class="cta">Explore the Kit</a>
-    </div>
-  </header>
-
-  <!-- ABOUT -->
-  <section class="about">
-    <h2>What is MixKit?</h2>
+  <section class="hero">
+    <h2>The Ultimate Blending Kit</h2>
     <p>
-      MixKit is an all-in-one portable blending system.
-      Designed to remove clutter and confusion, MixKit combines
-      essential tools into one clean, powe
+      Stop buying separate parts. MixKit gives you everything you need
+      to blend anywhere — faster, easier, cleaner.
+    </p>
+    <button class="hero-btn" onclick="scrollToStore()">Shop the Kit</button>
+  </section>
+
+  <!-- WHY BUY -->
+  <section class="why">
+    <h2>Why People Choose MixKit</h2>
+    <div class="reasons">
+      <div class="reason">⚡ Portable Power</div>
+      <div class="reason">🧼 Easy to Clean</div>
+      <div class="reason">📦 All-in-One Kit</div>
+      <div class="reason">🚀 Built for Daily Use</div>
+    </div>
+  </section>
+
+  <!-- STORE -->
+  <section id="store" class="store">
+    <h2>What’s Inside the Kit</h2>
+
+    <div class="products">
+      <div class="card">
+        <h3>Blender Cup</h3>
+        <p>Durable, portable, and powerful.</p>
+        <span>200 credits</span>
+        <button onclick="buy('Blender Cup', 200)">Buy</button>
+      </div>
+
+      <div class="card">
+        <h3>Battery Pack</h3>
+        <p>Extra power for nonstop blending.</p>
+        <span>150 credits</span>
+        <button onclick="buy('Battery Pack', 150)">Buy</button>
+      </div>
+
+      <div class="card">
+        <h3>Ingredient Book</h3>
+        <p>Recipes, mixes, and pro tips.</p>
+        <span>100 credits</span>
+        <button onclick="buy('Ingredient Book', 100)">Buy</button>
+      </div>
+
+      <div class="card">
+        <h3>Travel Lid</h3>
+        <p>Blend and go anywhere.</p>
+        <span>80 credits</span>
+        <button onclick="buy('Travel Lid', 80)">Buy</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PURCHASE LOG -->
+  <section class="log">
+    <h2>Your Purchases</h2>
+    <ul id="log"></ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
