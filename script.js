@@ -2,7 +2,7 @@ let credits = 1000;
 
 function buy(item, price) {
   if (credits < price) {
-    alert("Not enough credits");
+    alert("Not enough credits!");
     return;
   }
 
@@ -11,6 +11,10 @@ function buy(item, price) {
 
   const log = document.getElementById("log");
   const li = document.createElement("li");
-  li.textContent = `✓ ${item} purchased for ${price} credits`;
+  li.textContent = `✅ You bought ${item} for ${price} credits`;
   log.prepend(li);
+}
+
+function scrollToStore() {
+  document.getElementById("store").scrollIntoView({ behavior: "smooth" });
 }
