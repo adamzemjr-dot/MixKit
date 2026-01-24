@@ -1,20 +1,15 @@
-let credits = 1000;
+function buy(item) {
+  const log = document.getElementById("log");
 
-function buy(item, price) {
-  if (credits < price) {
-    alert("Not enough credits!");
-    return;
+  // prevent duplicate buys
+  for (let li of log.children) {
+    if (li.textContent.includes(item)) {
+      alert("You already bought this item!");
+      return;
+    }
   }
 
-  credits -= price;
-  document.getElementById("credits").textContent = credits;
-
-  const log = document.getElementById("log");
   const li = document.createElement("li");
-  li.textContent = `✅ You bought ${item} for ${price} credits`;
-  log.prepend(li);
-}
-
-function scrollToStore() {
-  document.getElementById("store").scrollIntoView({ behavior: "smooth" });
+  li.textContent = `✅ You bought the ${item}`;
+  log.appendChild(li);
 }
