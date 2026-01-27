@@ -1,206 +1,64 @@
-/* Reset and base */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #fff;
-  line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MixKit — All-in-One Smoothie Experience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Container helper */
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-/* HERO */
-.hero {
-  background: linear-gradient(135deg, #00ffd5, #0066ff);
-  text-align: center;
-  padding: 100px 20px;
-  color: #001010;
-}
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
 
-.hero h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  letter-spacing: 3px;
-}
+<body>
 
-.hero p {
-  font-size: 1.3rem;
-  max-width: 600px;
-  margin: 0 auto 40px;
-  font-weight: 600;
-}
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Your All-in-One Smoothie Experience</h1>
+    <p>
+      MixKit is a complete, portable smoothie solution —
+      designed to remove friction and make healthy living effortless.
+    </p>
+    <img src="MixKit_ Your All-in-One Smoothie Solution - visual selection.png" alt="MixKit Overview">
+  </section>
 
-.btn-hero {
-  padding: 18px 45px;
-  background: black;
-  border: none;
-  border-radius: 40px;
-  color: white;
-  font-weight: 700;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
-}
-.btn-hero:hover {
-  background: #00ffd5;
-  color: #001010;
-  box-shadow: 0 0 15px #00ffd5aa;
-}
+  <!-- WHAT'S INSIDE -->
+  <section class="switcher">
+    <h2>What’s Inside MixKit</h2>
 
-/* WHY MIXKIT */
-.why-mixkit {
-  background: #f0f0f0;
-  color: #222;
-  padding: 70px 20px;
-  text-align: center;
-}
+    <div class="switcher-container">
+      <img id="switchImage"
+           src="MixKit_ Your All-in-One Smoothie Solution - visual selection.png"
+           alt="MixKit Components">
 
-.why-mixkit h2 {
-  font-size: 2.8rem;
-  margin-bottom: 50px;
-}
+      <ul>
+        <li>⚡ Portable High-Power Blender</li>
+        <li>🥤 Reusable Smoothie Cups</li>
+        <li>🔋 Extra Long-Lasting Batteries</li>
+        <li>📖 Curated Smoothie Recipe Book</li>
+      </ul>
+    </div>
+  </section>
 
-.reasons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 30px;
-  max-width: 900px;
-  margin: 0 auto;
-}
+  <!-- COMPARISON -->
+  <section class="comparison">
+    <h2>MixKit vs Traditional Blenders</h2>
+    <img src="MixKit_ Your All-in-One Smoothie Solution - visual selection(1).png"
+         alt="Comparison">
+  </section>
 
-.reason {
-  background: #0066ff;
-  color: white;
-  padding: 30px;
-  border-radius: 20px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 1.2rem;
-  box-shadow: 0 10px 30px #004eccaa;
-  transition: transform 0.3s ease;
-}
+  <!-- CLOSING -->
+  <section class="closing">
+    <h2>MixKit isn’t just a blender.</h2>
+    <p>
+      It’s a thoughtfully designed system for people who want
+      healthy habits without inconvenience — wherever life takes them.
+    </p>
+  </section>
 
-.reason:hover {
-  transform: scale(1.1);
-  box-shadow: 0 15px 40px #00ffd5cc;
-}
-
-.icon {
-  font-size: 2.8rem;
-}
-
-/* STORE */
-.store {
-  background: #121f3f;
-  padding: 70px 20px;
-  text-align: center;
-}
-
-.store h2 {
-  font-size: 2.8rem;
-  margin-bottom: 40px;
-  font-weight: 700;
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.product-card {
-  background: linear-gradient(135deg, #001010, #003344);
-  border-radius: 25px;
-  padding: 30px 20px;
-  box-shadow: 0 10px 30px #001f2fcc;
-  color: #00ffd5;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.product-card:hover {
-  transform: translateY(-12px) scale(1.07);
-  box-shadow: 0 20px 40px #00ffd5cc;
-  color: #ffffff;
-}
-
-.product-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-.product-card p {
-  color: #a0eede;
-  margin-bottom: 25px;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.product-card button {
-  padding: 12px 30px;
-  background: #00ffd5;
-  border: none;
-  border-radius: 40px;
-  font-weight: 700;
-  color: #001010;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-.product-card button:hover {
-  background: #00ccb3;
-}
-
-/* PURCHASE LOG */
-.purchase-log {
-  background: #0b1720;
-  padding: 60px 20px;
-  text-align: center;
-  color: #00ffd5;
-}
-
-.purchase-log h2 {
-  font-size: 2.5rem;
-  margin-bottom: 35px;
-}
-
-#purchase-list {
-  max-width: 600px;
-  margin: 0 auto;
-  list-style: none;
-  padding-left: 0;
-}
-
-#purchase-list li {
-  background: #002a2f;
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  border-radius: 15px;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-/* FOOTER */
-footer {
-  background: #001010;
-  padding: 30px;
-  text-align: center;
-  color: #0066ff;
-  font-weight: 600;
-  letter-spacing: 2px;
-  font-size: 1rem;
-  user-select: none;
-}
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
