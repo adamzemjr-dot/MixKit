@@ -1,70 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MixKit — The Future of Smoothies</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MixKit Pitch</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Meet MixKit</h1>
-    <p>The all-in-one smoothie system built for modern life.</p>
-  </section>
+  <div id="app" class="pink">
+    <div class="card">
+      <h1 id="title"></h1>
+      <h2 id="subtitle"></h2>
+      <p id="content"></p>
 
-  <!-- TABS -->
-  <section class="tabs">
-    <div class="tab-buttons">
-      <button class="tab active" data-tab="1">Convenience</button>
-      <button class="tab" data-tab="2">Portability</button>
-      <button class="tab" data-tab="3">Power</button>
-      <button class="tab" data-tab="4">Sustainability</button>
-      <button class="tab" data-tab="5">Battery</button>
-      <button class="tab" data-tab="6">Recipes</button>
+      <div class="buttons">
+        <button id="back">Back</button>
+        <button id="next">Next</button>
+      </div>
     </div>
+  </div>
 
-    <div class="tab-content active" id="tab-1">
-      <h2>Effortless Convenience</h2>
-      <p>No bulky blender. No mess. Just blend and go.</p>
-      <span class="glow green"></span>
-    </div>
-
-    <div class="tab-content" id="tab-2">
-      <h2>True Portability</h2>
-      <p>Blend anywhere — gym, office, travel.</p>
-      <span class="glow blue"></span>
-    </div>
-
-    <div class="tab-content" id="tab-3">
-      <h2>High-Powered Blending</h2>
-      <p>Crush fruits and vegetables with ease.</p>
-      <span class="glow purple"></span>
-    </div>
-
-    <div class="tab-content" id="tab-4">
-      <h2>Reusable Cups</h2>
-      <p>Eco-friendly cups designed for daily use.</p>
-      <span class="glow violet"></span>
-    </div>
-
-    <div class="tab-content" id="tab-5">
-      <h2>Long-Lasting Batteries</h2>
-      <p>Enough power for multiple smoothies per charge.</p>
-      <span class="glow pink"></span>
-    </div>
-
-    <div class="tab-content" id="tab-6">
-      <h2>Recipe Book Included</h2>
-      <p>Nutritionist-designed smoothie recipes.</p>
-      <span class="glow red"></span>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
+  <script src="data.js"></script>
+  <script src="render.js"></script>
+  <script src="controls.js"></script>
 </body>
 </html>
