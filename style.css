@@ -1,64 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>MixKit — All-in-One Smoothie Experience</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0b0b0b;
+  color: #ffffff;
+  overflow-x: hidden;
+}
 
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+section {
+  padding: 120px 10%;
+}
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
+h1, h2 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
 
-<body>
+p {
+  opacity: 0.85;
+  line-height: 1.6;
+}
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Your All-in-One Smoothie Experience</h1>
-    <p>
-      MixKit is a complete, portable smoothie solution —
-      designed to remove friction and make healthy living effortless.
-    </p>
-    <img src="MixKit_ Your All-in-One Smoothie Solution - visual selection.png" alt="MixKit Overview">
-  </section>
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  <!-- WHAT'S INSIDE -->
-  <section class="switcher">
-    <h2>What’s Inside MixKit</h2>
+.hero h1 {
+  font-size: 3.5rem;
+  max-width: 700px;
+}
 
-    <div class="switcher-container">
-      <img id="switchImage"
-           src="MixKit_ Your All-in-One Smoothie Solution - visual selection.png"
-           alt="MixKit Components">
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-top: 20px;
+}
 
-      <ul>
-        <li>⚡ Portable High-Power Blender</li>
-        <li>🥤 Reusable Smoothie Cups</li>
-        <li>🔋 Extra Long-Lasting Batteries</li>
-        <li>📖 Curated Smoothie Recipe Book</li>
-      </ul>
-    </div>
-  </section>
+.hero img {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 720px;
+  animation: float 6s ease-in-out infinite;
+}
 
-  <!-- COMPARISON -->
-  <section class="comparison">
-    <h2>MixKit vs Traditional Blenders</h2>
-    <img src="MixKit_ Your All-in-One Smoothie Solution - visual selection(1).png"
-         alt="Comparison">
-  </section>
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
 
-  <!-- CLOSING -->
-  <section class="closing">
-    <h2>MixKit isn’t just a blender.</h2>
-    <p>
-      It’s a thoughtfully designed system for people who want
-      healthy habits without inconvenience — wherever life takes them.
-    </p>
-  </section>
+/* SWITCHER */
+.switcher {
+  text-align: center;
+}
 
-  <!-- JS -->
-  <script src="script.js"></script>
-</body>
-</html>
+.switcher h2 {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+}
+
+.switcher-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.switcher-container img {
+  width: 420px;
+  border-radius: 20px;
+  transition: opacity 0.5s ease;
+}
+
+.switcher ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.switcher li {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  opacity: 0.85;
+}
+
+/* COMPARISON */
+.comparison {
+  text-align: center;
+}
+
+.comparison h2 {
+  font-size: 2.6rem;
+  margin-bottom: 40px;
+}
+
+.comparison img {
+  width: 100%;
+  max-width: 850px;
+}
+
+/* CLOSING */
+.closing {
+  background: linear-gradient(180deg, #0b0b0b, #111);
+}
+
+.closing h2 {
+  font-size: 3rem;
+  max-width: 600px;
+}
+
+.closing p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin-top: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  section {
+    padding: 80px 6%;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .switcher-container {
+    flex-direction: column;
+  }
+}
