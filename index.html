@@ -1,77 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>MixKit - The Ultimate Blending Kit</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>MixKit — All-in-One Smoothie Experience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header class="hero">
-    <div class="container">
-      <h1>MixKit</h1>
-      <p>Your all-in-one blending kit — portable, powerful, perfect.</p>
-      <button class="btn-hero" onclick="scrollToProducts()">Explore the Kit</button>
-    </div>
-  </header>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Your All-in-One Smoothie Experience</h1>
+    <p>
+      MixKit is a complete, portable smoothie solution —
+      designed to remove friction and make healthy living effortless.
+    </p>
+    <img src="MixKit_ Your All-in-One Smoothie Solution - visual selection.png" alt="MixKit Overview">
+  </section>
 
-  <section class="why-mixkit">
-    <h2>Why MixKit?</h2>
-    <div class="reasons">
-      <div class="reason">
-        <span class="icon">⚡</span>
-        <p>Portable power that blends anywhere.</p>
-      </div>
-      <div class="reason">
-        <span class="icon">🧼</span>
-        <p>Easy to clean with removable parts.</p>
-      </div>
-      <div class="reason">
-        <span class="icon">📦</span>
-        <p>Everything you need in one kit.</p>
-      </div>
-      <div class="reason">
-        <span class="icon">🚀</span>
-        <p>Designed for everyday use and travel.</p>
-      </div>
+  <!-- WHAT'S INSIDE -->
+  <section class="switcher">
+    <h2>What’s Inside MixKit</h2>
+
+    <div class="switcher-container">
+      <img id="switchImage"
+           src="MixKit_ Your All-in-One Smoothie Solution - visual selection.png"
+           alt="MixKit Components">
+
+      <ul>
+        <li>⚡ Portable High-Power Blender</li>
+        <li>🥤 Reusable Smoothie Cups</li>
+        <li>🔋 Extra Long-Lasting Batteries</li>
+        <li>📖 Curated Smoothie Recipe Book</li>
+      </ul>
     </div>
   </section>
 
-  <section id="products" class="store">
-    <h2>What’s Inside the Kit</h2>
-    <div class="products-grid">
-      <div class="product-card">
-        <h3>Blender Cup</h3>
-        <p>Durable, portable, and powerful.</p>
-        <button onclick="buy('Blender Cup')">Buy</button>
-      </div>
-      <div class="product-card">
-        <h3>Battery Pack</h3>
-        <p>Extra power for nonstop blending.</p>
-        <button onclick="buy('Battery Pack')">Buy</button>
-      </div>
-      <div class="product-card">
-        <h3>Ingredient Book</h3>
-        <p>Recipes, mixes, and pro tips.</p>
-        <button onclick="buy('Ingredient Book')">Buy</button>
-      </div>
-      <div class="product-card">
-        <h3>Travel Lid</h3>
-        <p>Blend and go anywhere.</p>
-        <button onclick="buy('Travel Lid')">Buy</button>
-      </div>
-    </div>
+  <!-- COMPARISON -->
+  <section class="comparison">
+    <h2>MixKit vs Traditional Blenders</h2>
+    <img src="MixKit_ Your All-in-One Smoothie Solution - visual selection(1).png"
+         alt="Comparison">
   </section>
 
-  <section class="purchase-log">
-    <h2>Your Purchased Items</h2>
-    <ul id="purchase-list"></ul>
+  <!-- CLOSING -->
+  <section class="closing">
+    <h2>MixKit isn’t just a blender.</h2>
+    <p>
+      It’s a thoughtfully designed system for people who want
+      healthy habits without inconvenience — wherever life takes them.
+    </p>
   </section>
 
-  <footer>
-    <p>© 2026 MixKit — One kit. Every mix.</p>
-  </footer>
-
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
