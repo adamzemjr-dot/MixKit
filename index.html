@@ -3,23 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MixKit Pitch</title>
+  <title>MixKit</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div id="app" class="pink">
-    <div class="card">
-      <h1 id="title"></h1>
-      <h2 id="subtitle"></h2>
-      <p id="content"></p>
+  <!-- NAV -->
+  <nav>
+    <button onclick="scrollToSection('hero')">Home</button>
+    <button onclick="scrollToSection('inside')">What’s Inside</button>
+    <button onclick="scrollToSection('why')">Why MixKit?</button>
+    <button onclick="scrollToSection('target')">Who It’s For</button>
+    <button onclick="scrollToSection('invest')">Dragons’ Den</button>
+  </nav>
 
-      <div class="buttons">
-        <button id="back">Back</button>
-        <button id="next">Next</button>
-      </div>
+  <!-- HERO -->
+  <section id="hero" class="section pink">
+    <h1>MixKit</h1>
+    <p class="subtitle">The all-in-one smoothie starter box</p>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section id="inside" class="section purple">
+    <h2>What’s Inside</h2>
+    <div class="card">
+      <ul>
+        <li>🥤 Portable blender cup</li>
+        <li>🔋 Extra rechargeable batteries</li>
+        <li>📖 Smoothie recipe book</li>
+      </ul>
     </div>
-  </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why" class="section green">
+    <h2>Why MixKit?</h2>
+    <div class="card">
+      <p>
+        MixKit removes friction from healthy living.
+        Blend anywhere. No mess. No confusion.
+      </p>
+    </div>
+  </section>
+
+  <!-- TARGET -->
+  <section id="target" class="section blue">
+    <h2>Perfect For</h2>
+    <div class="card">
+      <p>🎓 Students</p>
+      <p>🏋️ Gym lovers</p>
+      <p>👨‍👩‍👧 Families</p>
+      <p>✈️ Travelers</p>
+    </div>
+  </section>
+
+  <!-- INVEST -->
+  <section id="invest" class="section yellow">
+    <h2>Dragons’ Den Ready</h2>
+    <div class="card">
+      <p><strong>One box.</strong></p>
+      <p><strong>One blend.</strong></p>
+      <p><strong>Huge potential.</strong></p>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
