@@ -1,56 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
 }
 
-#app {
-  min-height: 100vh;
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
   display: flex;
   justify-content: center;
-  align-items: center;
-  transition: background 0.5s ease;
+  gap: 10px;
+  padding: 10px;
+  z-index: 100;
 }
 
-.card {
-  background: white;
-  padding: 2rem;
+nav button {
+  border: none;
+  padding: 8px 14px;
   border-radius: 20px;
-  max-width: 500px;
+  cursor: pointer;
+  background: #111;
+  color: white;
+}
+
+/* SECTIONS */
+.section {
+  min-height: 100vh;
+  padding: 100px 20px 40px;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
+  margin-bottom: 10px;
 }
 
-h2 {
-  color: #555;
-  font-weight: normal;
+.subtitle {
+  font-size: 1.4rem;
 }
 
-p {
-  font-size: 1.1rem;
-  margin: 1.5rem 0;
+/* CARDS */
+.card {
+  background: white;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
-.buttons {
-  display: flex;
-  justify-content: space-between;
+/* LIST */
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-button {
-  padding: 0.6rem 1.4rem;
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
+li {
+  font-size: 1.2rem;
+  margin: 10px 0;
 }
 
-button:disabled {
-  opacity: 0.4;
-}
-
-/* Background themes */
+/* COLORS */
 .pink { background: linear-gradient(135deg, #f472b6, #fb923c); }
 .purple { background: linear-gradient(135deg, #c084fc, #818cf8); }
 .green { background: linear-gradient(135deg, #4ade80, #34d399); }
