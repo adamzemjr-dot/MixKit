@@ -31,4 +31,41 @@ const slides = [
   }
 ];
 
-let currentIndex = 0;
+let index = 0;
+
+const app = document.getElementById("app");
+const titleEl = document.getElementById("title");
+const subtitleEl = document.getElementById("subtitle");
+const contentEl = document.getElementById("content");
+const backBtn = document.getElementById("back");
+const nextBtn = document.getElementById("next");
+
+function render() {
+  const slide = slides[index];
+
+  titleEl.textContent = slide.title;
+  subtitleEl.textContent = slide.subtitle;
+  contentEl.textContent = slide.content;
+
+  app.className = "";
+  app.classList.add(slide.theme);
+
+  backBtn.disabled = index === 0;
+  nextBtn.disabled = index === slides.length - 1;
+}
+
+backBtn.onclick = () => {
+  if (index > 0) {
+    index--;
+    render();
+  }
+};
+
+nextBtn.onclick = () => {
+  if (index < slides.length - 1) {
+    index++;
+    render();
+  }
+};
+
+render();
