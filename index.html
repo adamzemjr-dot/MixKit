@@ -1,74 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MixKit</title>
+
+  <!-- MUST MATCH FILE NAME -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <div class="logo">MixKit</div>
+  <h1 class="logo">MixKit</h1>
   <nav>
-    <button onclick="go('about')">About</button>
-    <button onclick="go('inside')">Inside</button>
-    <button onclick="go('gallery')">Flavours</button>
-    <button onclick="go('pitch')">Pitch</button>
+    <button onclick="goTo('about')">About</button>
+    <button onclick="goTo('inside')">Inside</button>
+    <button onclick="goTo('flavours')">Flavours</button>
+    <button onclick="goTo('pitch')">Pitch</button>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-text">
-    <h1>Healthy.</h1>
-    <h1>Simple.</h1>
-    <h1>Anywhere.</h1>
+    <h2>Healthy.</h2>
+    <h2>Simple.</h2>
+    <h2>Anywhere.</h2>
     <p>The all-in-one smoothie starter box.</p>
   </div>
 
   <img
-    class="hero-img"
-    src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=700&q=80"
-    alt="Smoothie">
+    src="https://images.unsplash.com/photo-1553530666-4a7d7e4a9c91?auto=format&fit=crop&w=800&q=80"
+    alt="Smoothie"
+  >
 </section>
 
-<section id="about" class="section">
-  <h2>What is MixKit?</h2>
+<section id="about">
+  <h3>What is MixKit?</h3>
   <p>
-    MixKit removes friction from healthy living.
-    Everything you need to blend, anywhere.
+    MixKit is a portable smoothie solution.
+    Blend healthy drinks anywhere — school, gym, travel.
   </p>
 </section>
 
-<section id="inside" class="section split">
+<section id="inside" class="split">
   <div>
-    <h2>What’s Inside</h2>
+    <h3>What’s Inside</h3>
     <ul>
       <li>🥤 Portable blender cup</li>
       <li>🔋 Extra batteries</li>
-      <li>📖 Recipe book</li>
+      <li>📖 Smoothie recipe book</li>
     </ul>
   </div>
 
   <img
-    class="soft-img"
-    src="https://images.unsplash.com/photo-1615478503562-ec2d8b5f6c8f?auto=format&fit=crop&w=700&q=80"
-    alt="Blender">
+    src="https://images.unsplash.com/photo-1610970878459-a0e464d7592b?auto=format&fit=crop&w=800&q=80"
+    alt="Blender"
+  >
 </section>
 
-<section id="gallery" class="section">
-  <h2>Smoothie Inspiration</h2>
-
+<section id="flavours">
+  <h3>Popular Smoothies</h3>
   <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=900&q=80">
-    <img src="https://images.unsplash.com/photo-1553530666-4a7d7e4a9c91?auto=format&fit=crop&w=900&q=80">
-    <img src="https://images.unsplash.com/photo-1610970878459-a0e464d7592b?auto=format&fit=crop&w=900&q=80">
+    <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=800&q=80">
+    <img src="https://images.unsplash.com/photo-1572441710534-680a8a75c2f4?auto=format&fit=crop&w=800&q=80">
+    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80">
   </div>
 </section>
 
-<section id="pitch" class="section highlight">
-  <h2>Dragons’ Den</h2>
-  <p>One product. One box. Massive potential.</p>
+<section id="pitch" class="pitch">
+  <h3>Dragons’ Den Pitch</h3>
+  <p>Simple product. Huge demand. Massive growth.</p>
 </section>
 
 <script src="script.js"></script>
