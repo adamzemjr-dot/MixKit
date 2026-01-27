@@ -2,69 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MixKit</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <button onclick="scrollToSection('hero')">Home</button>
-    <button onclick="scrollToSection('inside')">What’s Inside</button>
-    <button onclick="scrollToSection('why')">Why MixKit?</button>
-    <button onclick="scrollToSection('target')">Who It’s For</button>
-    <button onclick="scrollToSection('invest')">Dragons’ Den</button>
-  </nav>
+  <header>
+    <div class="logo">MixKit</div>
+    <nav>
+      <button onclick="go('about')">About</button>
+      <button onclick="go('inside')">Inside</button>
+      <button onclick="go('why')">Why</button>
+      <button onclick="go('invest')">Pitch</button>
+    </nav>
+  </header>
 
-  <!-- HERO -->
-  <section id="hero" class="section pink">
-    <h1>MixKit</h1>
-    <p class="subtitle">The all-in-one smoothie starter box</p>
+  <section class="hero">
+    <h1>Blend smarter.</h1>
+    <p>The all-in-one smoothie starter box.</p>
   </section>
 
-  <!-- WHAT'S INSIDE -->
-  <section id="inside" class="section purple">
-    <h2>What’s Inside</h2>
-    <div class="card">
-      <ul>
-        <li>🥤 Portable blender cup</li>
-        <li>🔋 Extra rechargeable batteries</li>
-        <li>📖 Smoothie recipe book</li>
-      </ul>
-    </div>
+  <section id="about" class="section">
+    <h2>What is MixKit?</h2>
+    <p>
+      MixKit is a premium box containing a portable blender cup,
+      extra batteries, and a curated smoothie recipe book —
+      designed for busy, health-focused people.
+    </p>
   </section>
 
-  <!-- WHY -->
-  <section id="why" class="section green">
-    <h2>Why MixKit?</h2>
-    <div class="card">
-      <p>
-        MixKit removes friction from healthy living.
-        Blend anywhere. No mess. No confusion.
-      </p>
-    </div>
+  <section id="inside" class="section cards">
+    <div class="card">🥤 Portable Blender</div>
+    <div class="card">🔋 Extra Batteries</div>
+    <div class="card">📖 Recipe Book</div>
   </section>
 
-  <!-- TARGET -->
-  <section id="target" class="section blue">
-    <h2>Perfect For</h2>
-    <div class="card">
-      <p>🎓 Students</p>
-      <p>🏋️ Gym lovers</p>
-      <p>👨‍👩‍👧 Families</p>
-      <p>✈️ Travelers</p>
-    </div>
+  <section id="why" class="section">
+    <h2>Why It Works</h2>
+    <p>
+      No setup. No guessing. No wasted ingredients.
+      Just open the box and blend anywhere.
+    </p>
   </section>
 
-  <!-- INVEST -->
-  <section id="invest" class="section yellow">
+  <section id="invest" class="section highlight">
     <h2>Dragons’ Den Ready</h2>
-    <div class="card">
-      <p><strong>One box.</strong></p>
-      <p><strong>One blend.</strong></p>
-      <p><strong>Huge potential.</strong></p>
-    </div>
+    <p><strong>Simple product.</strong></p>
+    <p><strong>Mass market.</strong></p>
+    <p><strong>Scalable brand.</strong></p>
   </section>
 
   <script src="script.js"></script>
