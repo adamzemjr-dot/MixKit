@@ -1,71 +1,72 @@
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #050505;
+  font-family: Inter, Arial, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
   color: white;
-}
-
-section {
-  padding: 100px 8%;
 }
 
 /* HERO */
 .hero {
+  padding: 120px 8%;
   text-align: center;
 }
 
 .hero h1 {
   font-size: 4rem;
-  margin-bottom: 10px;
+  background: linear-gradient(90deg, #22c55e, #38bdf8, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-  opacity: 0.7;
+  font-size: 1.2rem;
+  opacity: 0.8;
 }
 
 /* TABS */
 .tabs {
-  max-width: 1100px;
-  margin: auto;
+  padding: 100px 8%;
 }
 
 .tab-buttons {
   display: flex;
-  flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 60px;
 }
 
 .tab {
-  background: #111;
-  border: none;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
   color: white;
-  padding: 14px 24px;
-  border-radius: 30px;
+  padding: 12px 22px;
+  border-radius: 999px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .tab:hover {
+  background: rgba(255,255,255,0.18);
   transform: translateY(-2px);
 }
 
 .tab.active {
-  background: linear-gradient(135deg, #00ff99, #00ccff);
+  background: linear-gradient(135deg, #22c55e, #38bdf8);
   color: black;
 }
 
 /* CONTENT */
 .tab-content {
   display: none;
-  position: relative;
-  text-align: center;
-  padding: 80px 40px;
+  max-width: 900px;
+  margin: auto;
+  padding: 80px;
   border-radius: 30px;
-  background: #0c0c0c;
-  overflow: hidden;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(20px);
+  position: relative;
 }
 
 .tab-content.active {
@@ -73,29 +74,11 @@ section {
 }
 
 .tab-content h2 {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .tab-content p {
   font-size: 1.1rem;
   opacity: 0.85;
 }
-
-/* GLOW ORBS */
-.glow {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.6;
-  top: -80px;
-  right: -80px;
-}
-
-.green { background: #00ff99; }
-.blue { background: #00ccff; }
-.purple { background: #8b5cf6; }
-.violet { background: #a855f7; }
-.pink { background: #ec4899; }
-.red { background: #f43f5e; }
