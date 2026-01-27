@@ -1,12 +1,11 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #0f172a, #020617);
+  background: linear-gradient(135deg, #020617, #0f172a);
   color: white;
   scroll-behavior: smooth;
 }
 
-/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -15,13 +14,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.55);
   backdrop-filter: blur(10px);
+  z-index: 10;
 }
 
 nav button {
   background: none;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.35);
   color: white;
   padding: 6px 14px;
   border-radius: 20px;
@@ -34,13 +34,13 @@ nav button:hover {
   color: black;
 }
 
-/* HERO */
 .hero {
   min-height: 100vh;
   padding: 140px 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  gap: 40px;
 }
 
 .hero h2 {
@@ -50,16 +50,17 @@ nav button:hover {
 
 .hero p {
   margin-top: 20px;
-  opacity: 0.8;
+  max-width: 480px;
+  opacity: 0.85;
+  line-height: 1.6;
 }
 
 .hero img {
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
   border-radius: 30px;
 }
 
-/* SECTIONS */
 section {
   padding: 120px 60px;
   max-width: 1000px;
@@ -67,15 +68,19 @@ section {
 }
 
 h3 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   margin-bottom: 20px;
 }
 
-/* SPLIT */
+p {
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 50px;
 }
 
 .split img {
@@ -83,10 +88,10 @@ h3 {
   border-radius: 30px;
 }
 
-/* GALLERY */
 .gallery {
+  margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
 }
 
@@ -96,7 +101,6 @@ h3 {
   border-radius: 30px;
 }
 
-/* PITCH */
 .pitch {
   text-align: center;
 }
