@@ -1,17 +1,12 @@
-const images = [
-  "MixKit_ Your All-in-One Smoothie Solution - visual selection.png",
-  "MixKit_ Your All-in-One Smoothie Solution - visual selection(1).png"
-];
+const tabs = document.querySelectorAll(".tab");
+const contents = document.querySelectorAll(".tab-content");
 
-let index = 0;
-const img = document.getElementById("switchImage");
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    contents.forEach(c => c.classList.remove("active"));
 
-setInterval(() => {
-  img.style.opacity = 0;
-
-  setTimeout(() => {
-    index = (index + 1) % images.length;
-    img.src = images[index];
-    img.style.opacity = 1;
-  }, 400);
-}, 3500);
+    tab.classList.add("active");
+    document.getElementById(`tab-${tab.dataset.tab}`).classList.add("active");
+  });
+});
