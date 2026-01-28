@@ -1,106 +1,135 @@
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #020617, #0f172a);
-  color: white;
-  scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MixKit</title>
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(10px);
-  z-index: 10;
-}
+  <!-- LINK TO CSS (VERY IMPORTANT) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-nav button {
-  background: none;
-  border: 1px solid rgba(255,255,255,0.35);
-  color: white;
-  padding: 6px 14px;
-  border-radius: 20px;
-  margin-left: 10px;
-  cursor: pointer;
-}
+<header>
+  <div class="logo">MixKit</div>
+  <nav>
+    <button onclick="goTo('about')">About</button>
+    <button onclick="goTo('inside')">Inside</button>
+    <button onclick="goTo('flavours')">Flavours</button>
+    <button onclick="goTo('pitch')">Pitch</button>
+  </nav>
+</header>
 
-nav button:hover {
-  background: white;
-  color: black;
-}
+<section class="hero">
+  <div class="hero-text">
+    <h1>Healthy.</h1>
+    <h1>Simple.</h1>
+    <h1>Anywhere.</h1>
 
-.hero {
-  min-height: 100vh;
-  padding: 140px 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px;
-}
+    <p>
+      MixKit is the all-in-one smoothie starter box built for busy lives.
+      It allows anyone to make fresh, delicious smoothies anywhere —
+      no kitchen, no cables, no effort.
+    </p>
 
-.hero h2 {
-  font-size: 3.2rem;
-  margin: 0;
-}
+    <p>
+      Designed for students, athletes, and people on the move,
+      MixKit makes healthy habits easy to start and easy to keep.
+    </p>
+  </div>
 
-.hero p {
-  margin-top: 20px;
-  max-width: 480px;
-  opacity: 0.85;
-  line-height: 1.6;
-}
+  <div class="hero-image">
+    <img
+      src="https://images.unsplash.com/photo-1505253216365-8c0d6c33c6a9?auto=format&fit=crop&w=900&q=80"
+      alt="Strawberry banana smoothie">
+  </div>
+</section>
 
-.hero img {
-  width: 100%;
-  max-width: 440px;
-  border-radius: 30px;
-}
+<section id="about">
+  <h2>What is MixKit?</h2>
 
-section {
-  padding: 120px 60px;
-  max-width: 1000px;
-  margin: auto;
-}
+  <p>
+    MixKit was created to remove the barriers to healthy eating.
+    Smoothies are nutritious and convenient, but they’re often expensive
+    or require bulky equipment.
+  </p>
 
-h3 {
-  font-size: 2.3rem;
-  margin-bottom: 20px;
-}
+  <p>
+    MixKit combines portability, power, and simplicity into one compact box,
+    allowing users to blend fresh smoothies wherever life takes them.
+  </p>
+</section>
 
-p {
-  line-height: 1.7;
-  opacity: 0.9;
-}
+<section id="inside" class="cards">
+  <h2>What’s Inside the Box</h2>
 
-.split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-}
+  <div class="card-grid">
+    <div class="card">
+      <h3>Portable Blender</h3>
+      <p>
+        A powerful, rechargeable blender cup designed to crush fruit,
+        ice, and frozen ingredients with ease.
+      </p>
+    </div>
 
-.split img {
-  width: 100%;
-  border-radius: 30px;
-}
+    <div class="card">
+      <h3>Extra Batteries</h3>
+      <p>
+        Two backup batteries ensure uninterrupted blending,
+        perfect for travel, school, or outdoor use.
+      </p>
+    </div>
 
-.gallery {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
-}
+    <div class="card">
+      <h3>Recipe Book</h3>
+      <p>
+        A detailed smoothie guide packed with classic blends,
+        energy boosters, and recovery smoothies.
+      </p>
+    </div>
+  </div>
+</section>
 
-.gallery img {
-  height: 320px;
-  object-fit: cover;
-  border-radius: 30px;
-}
+<section id="flavours">
+  <h2>Endless Flavours</h2>
 
-.pitch {
-  text-align: center;
-}
+  <p>
+    From strawberry banana classics to tropical mango blends
+    and vibrant green smoothies, MixKit encourages creativity
+    and experimentation.
+  </p>
+
+  <div class="gallery">
+    <div class="img-box">
+      <img src="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?auto=format&fit=crop&w=900&q=80" alt="Strawberry smoothie">
+    </div>
+
+    <div class="img-box">
+      <img src="https://images.unsplash.com/photo-1542444459-db63c58c7f10?auto=format&fit=crop&w=900&q=80" alt="Green smoothie">
+    </div>
+
+    <div class="img-box">
+      <img src="https://images.unsplash.com/photo-1590080877777-0f3b9e91b1d4?auto=format&fit=crop&w=900&q=80" alt="Mango smoothie">
+    </div>
+  </div>
+</section>
+
+<section id="pitch" class="pitch">
+  <h2>The Pitch</h2>
+
+  <p>
+    The global wellness market is growing rapidly, but convenience
+    remains a challenge. MixKit bridges that gap by making nutrition
+    portable, affordable, and simple.
+  </p>
+
+  <p>
+    With low production costs, strong branding potential,
+    and a broad target audience, MixKit is built to scale.
+  </p>
+</section>
+
+<!-- LINK TO JS (VERY IMPORTANT) -->
+<script src="script.js"></script>
+</body>
+</html>
