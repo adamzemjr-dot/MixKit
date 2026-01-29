@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>MixKit</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -13,40 +13,41 @@
     <p>Your portable smoothie starter box</p>
   </header>
 
-  <section class="image-section">
-    <h2>What’s Inside the MixKit</h2>
+  <main class="container">
 
-    <div class="image-grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1615485291234-9d6942184a64" alt="Portable blender">
-        <p>Portable Blender</p>
+    <section>
+      <h2>What’s Inside the MixKit</h2>
+
+      <div class="grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1615485291234-9d6942184a64" alt="Portable blender">
+          <h3>Portable Blender</h3>
+          <p>Blend anywhere, anytime.</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1505253216365-2ed7b417d29a" alt="Fruit smoothie">
+          <h3>Fresh Smoothies</h3>
+          <p>Made with real fruit.</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1570197571499-166b36435e9f" alt="Healthy smoothie">
+          <h3>Healthy Ingredients</h3>
+          <p>Fuel your day the right way.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1505253216365-2ed7b417d29a" alt="Fruit smoothie">
-        <p>Fresh Smoothies</p>
-      </div>
+    <section class="tech">
+      <h2>Smart Power</h2>
+      <p>Inspired by futuristic tech.</p>
+      <img src="images/ironman-ui.png" alt="Tech inspiration">
+    </section>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1570197571499-166b36435e9f" alt="Berry smoothie">
-        <p>Healthy Ingredients</p>
-      </div>
-    </div>
-  </section>
+    <button id="cta-btn">Coming Soon</button>
 
-  <!-- NEW FEATURE SECTION -->
-  <section class="tech-section">
-    <h2>Smart Power. Smart Fuel.</h2>
-    <p>Inspired by next-gen tech to fuel your body anywhere.</p>
-
-    <img
-      src="images/ironman-ui.png"
-      alt="Futuristic tech interface inspiration"
-      class="tech-image"
-    >
-  </section>
-
-  <button id="cta-btn">Order Your MixKit</button>
+  </main>
 
   <script src="script.js"></script>
 </body>
