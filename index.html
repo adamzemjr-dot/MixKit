@@ -2,45 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MixKit</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MixKit</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>MixKit</h1>
-    <p>Your portable smoothie starter box</p>
-  </header>
+<header>
+  <div class="logo">MixKit</div>
+  <nav>
+    <button onclick="goTo('about')">About</button>
+    <button onclick="goTo('inside')">Inside</button>
+    <button onclick="goTo('flavours')">Flavours</button>
+    <button onclick="goTo('pitch')">Pitch</button>
+  </nav>
+</header>
 
-  <section>
-    <h2>What’s Inside the MixKit</h2>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Healthy.</h1>
+    <h1>Simple.</h1>
+    <h1>Anywhere.</h1>
 
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1615485291234-9d6942184a64">
-        <h3>Portable Blender</h3>
-        <p>Blend anywhere, anytime.</p>
-      </div>
+    <p>
+      MixKit is a portable smoothie starter box designed for people who want
+      real nutrition without slowing down. No kitchen, no cables — just blend
+      and go.
+    </p>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1505253216365-2ed7b417d29a">
-        <h3>Fresh Smoothies</h3>
-        <p>Made with real fruit.</p>
-      </div>
+    <p>
+      Built for students, athletes, and busy lifestyles, MixKit makes healthy
+      habits easy to start and easy to maintain.
+    </p>
+  </div>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1570197571499-166b36435e9f">
-        <h3>Healthy Ingredients</h3>
-        <p>Simple, nutritious ingredients.</p>
-      </div>
+  <div class="smoothie large strawberry">
+    <div class="liquid"></div>
+    <div class="glass"></div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>What is MixKit?</h2>
+  <p>
+    MixKit removes the friction from healthy eating. Smoothies are one of the
+    fastest ways to get essential nutrients, but traditional setups are bulky
+    and inconvenient.
+  </p>
+  <p>
+    MixKit combines portability, simplicity, and power into one compact box
+    that fits seamlessly into everyday life.
+  </p>
+</section>
+
+<section id="inside" class="cards">
+  <h2>What’s Inside the Box</h2>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Portable Blender</h3>
+      <p>
+        A powerful, rechargeable blender cup capable of blending fruit and
+        frozen ingredients smoothly and efficiently.
+      </p>
     </div>
-  </section>
 
-  <footer>
-    <p>MixKit – School Project</p>
-  </footer>
+    <div class="card">
+      <h3>Extra Batteries</h3>
+      <p>
+        Two backup batteries ensure you never run out of power — perfect for
+        long days and travel.
+      </p>
+    </div>
 
-  <script src="script.js"></script>
+    <div class="card">
+      <h3>Recipe Book</h3>
+      <p>
+        A curated smoothie guide featuring classic blends, tropical flavors,
+        and nutrient-rich recipes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="flavours">
+  <h2>Endless Flavours</h2>
+
+  <p>
+    MixKit encourages creativity. From strawberry banana to tropical mango
+    and refreshing green smoothies, the possibilities are endless.
+  </p>
+
+  <div class="smoothie-grid">
+    <div class="smoothie strawberry">
+      <div class="liquid"></div>
+      <div class="glass"></div>
+      <span>Strawberry Banana</span>
+    </div>
+
+    <div class="smoothie mango">
+      <div class="liquid"></div>
+      <div class="glass"></div>
+      <span>Tropical Mango</span>
+    </div>
+
+    <div class="smoothie green">
+      <div class="liquid"></div>
+      <div class="glass"></div>
+      <span>Green Boost</span>
+    </div>
+  </div>
+</section>
+
+<section id="pitch" class="pitch">
+  <h2>The Pitch</h2>
+
+  <p>
+    The global wellness market continues to grow, but convenience remains the
+    biggest barrier. MixKit bridges that gap by making nutrition portable,
+    affordable, and easy.
+  </p>
+
+  <p>
+    MixKit isn’t just a product — it’s a habit-forming lifestyle brand.
+  </p>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
