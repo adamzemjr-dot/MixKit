@@ -6,7 +6,7 @@
 }
 
 body {
-  background: radial-gradient(circle at top, #0c1220, #05080f);
+  background: radial-gradient(circle at top, #0b1220, #05080f);
   color: white;
 }
 
@@ -15,60 +15,61 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(5, 8, 15, 0.8);
-  backdrop-filter: blur(10px);
+  background: rgba(5, 8, 15, 0.75);
+  backdrop-filter: blur(12px);
   display: flex;
   justify-content: space-between;
-  padding: 16px 40px;
+  padding: 18px 50px;
 }
 
 .logo {
-  font-weight: 700;
   font-size: 20px;
+  font-weight: 700;
 }
 
 .nav-links button {
-  margin-left: 12px;
+  margin-left: 14px;
   background: #11182a;
   border: none;
   color: white;
-  padding: 8px 14px;
+  padding: 8px 16px;
   border-radius: 14px;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .nav-links button:hover {
-  background: #1c2642;
+  background: #1d2a4d;
 }
 
 /* HERO */
 .hero {
-  padding: 120px 80px;
+  padding: 120px 80px 100px;
   max-width: 900px;
 }
 
 .hero h1 {
   font-size: 64px;
-  line-height: 1.1;
-  margin-bottom: 20px;
+  line-height: 1.05;
+  margin-bottom: 24px;
 }
 
 .hero p {
-  color: #cbd5f5;
   font-size: 18px;
-  max-width: 700px;
+  color: #cbd5f5;
+  max-width: 720px;
+  line-height: 1.6;
 }
 
 /* FLAVOURS */
 .flavours {
-  padding: 40px 80px 100px;
+  padding: 40px 80px 120px;
 }
 
 .intro {
   max-width: 900px;
+  margin: 0 auto 50px;
   color: #cbd5f5;
-  margin: 0 auto 40px auto;
   font-size: 16px;
   line-height: 1.6;
 }
@@ -80,15 +81,19 @@ body {
 }
 
 .card {
-  padding: 40px;
-  border-radius: 32px;
+  padding: 42px;
+  border-radius: 34px;
   position: relative;
   overflow: hidden;
-  transition: transform 0.4s;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-12px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
 }
 
 .card h3 {
@@ -97,42 +102,24 @@ body {
 }
 
 .card p {
-  color: rgba(255,255,255,0.85);
   margin-top: 12px;
   font-size: 15px;
+  color: rgba(255,255,255,0.88);
 }
 
-/* COLORS */
-.red { background: linear-gradient(135deg, #ff5f6d, #c7383f); }
-.purple { background: linear-gradient(135deg, #9f7aea, #5a3aa5); }
-.green { background: linear-gradient(135deg, #6ee7b7, #2f9e73); }
+/* CARD COLORS */
+.red {
+  background: linear-gradient(135deg, #ff5f6d, #c7383f);
+}
+.purple {
+  background: linear-gradient(135deg, #9f7aea, #5b3aa8);
+}
+.green {
+  background: linear-gradient(135deg, #6ee7b7, #2f9e73);
+}
 
 /* SMOOTHIE GLASS */
 .glass {
   position: absolute;
-  top: 30px;
+  top: 32px;
   left: 50%;
-  transform: translateX(-50%);
-  width: 70px;
-  height: 110px;
-  border-radius: 0 0 20px 20px;
-  animation: sway 4s ease-in-out infinite;
-  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.25);
-}
-
-/* LIQUID */
-.strawberry {
-  background: linear-gradient(to top, #ff7b7b, #ffd1d1);
-}
-.berry {
-  background: linear-gradient(to top, #b28cff, #e6d9ff);
-}
-.green {
-  background: linear-gradient(to top, #6ee7b7, #d1fae5);
-}
-
-/* ANIMATION */
-@keyframes sway {
-  0%, 100% { transform: translateX(-50%) rotate(-3deg); }
-  50% { transform: translateX(-50%) rotate(3deg); }
-}
