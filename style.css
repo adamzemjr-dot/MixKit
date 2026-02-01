@@ -17,10 +17,10 @@ header {
   top: 0;
   background: rgba(5,7,13,0.85);
   backdrop-filter: blur(10px);
+  padding: 18px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
   z-index: 10;
 }
 
@@ -65,18 +65,15 @@ nav button:hover {
   color: #cfd6e4;
 }
 
-/* SMOOTHIE VISUAL */
-.smoothie-display {
+/* HERO SMOOTHIE */
+.hero-smoothie {
   width: 260px;
   height: 420px;
   border-radius: 0 0 50px 50px;
+  background: linear-gradient(#ff7a7a, #c62828);
   margin: auto;
   box-shadow: 0 30px 70px rgba(0,0,0,0.6);
   animation: float 5s ease-in-out infinite;
-}
-
-.smoothie-display.strawberry {
-  background: linear-gradient(#ff7a7a, #c62828);
 }
 
 @keyframes float {
@@ -140,11 +137,14 @@ section p {
 }
 
 .cup {
+  position: relative;
   height: 220px;
   border-radius: 0 0 40px 40px;
   margin-bottom: 14px;
+  overflow: hidden;
 }
 
+/* BIG CUP COLORS */
 .flavour.strawberry .cup {
   background: linear-gradient(#ff7a7a, #c62828);
 }
@@ -155,4 +155,38 @@ section p {
 
 .flavour.green .cup {
   background: linear-gradient(#7dffb3, #1e7f5a);
+}
+
+/* MINI SPINNING SMOOTHIE (AUTO) */
+.cup::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 80px;
+  border-radius: 0 0 14px 14px;
+  transform: translate(-50%, -50%);
+  animation: sway 4s ease-in-out infinite;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* MINI COLORS */
+.flavour.strawberry .cup::after {
+  background: linear-gradient(#ffd1d1, #ff4d4d);
+}
+
+.flavour.berry .cup::after {
+  background: linear-gradient(#e0ccff, #7e57c2);
+}
+
+.flavour.green .cup::after {
+  background: linear-gradient(#c8ffe2, #2ecc71);
+}
+
+/* SWAY ANIMATION */
+@keyframes sway {
+  0%   { transform: translate(-50%, -50%) rotate(-6deg); }
+  50%  { transform: translate(-50%, -50%) rotate(6deg); }
+  100% { transform: translate(-50%, -50%) rotate(-6deg); }
 }
