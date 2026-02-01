@@ -1,8 +1,8 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
 }
 
 body {
@@ -10,163 +10,114 @@ body {
   color: white;
 }
 
-/* NAVBAR */
-.navbar {
+/* NAV */
+nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(5, 8, 15, 0.75);
-  backdrop-filter: blur(12px);
+  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
-  padding: 18px 50px;
+  align-items: center;
+  background: rgba(5, 8, 15, 0.6);
+  backdrop-filter: blur(12px);
 }
 
-.logo {
+nav h1 {
   font-size: 20px;
-  font-weight: 700;
 }
 
-.nav-links button {
-  margin-left: 14px;
-  background: #11182a;
+nav button {
+  background: #111827;
   border: none;
   color: white;
-  padding: 8px 16px;
-  border-radius: 14px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  margin-left: 10px;
   cursor: pointer;
-  transition: all 0.3s;
-}
-
-.nav-links button:hover {
-  background: #1d2a4d;
 }
 
 /* HERO */
 .hero {
-  padding: 120px 80px 100px;
-  max-width: 900px;
+  padding: 120px 60px 140px;
+  max-width: 1200px;
 }
 
-.hero h1 {
-  font-size: 64px;
+.hero h2 {
+  font-size: 72px;
   line-height: 1.05;
   margin-bottom: 24px;
 }
 
 .hero p {
+  max-width: 520px;
+  color: #c7d2fe;
   font-size: 18px;
-  color: #cbd5f5;
-  max-width: 720px;
-  line-height: 1.6;
 }
 
 /* FLAVOURS */
 .flavours {
-  padding: 40px 80px 120px;
+  padding: 80px 60px 140px;
 }
 
 .intro {
-  max-width: 900px;
-  margin: 0 auto 50px;
-  color: #cbd5f5;
-  font-size: 16px;
-  line-height: 1.6;
+  max-width: 700px;
+  margin-bottom: 60px;
+  color: #c7d2fe;
+  font-size: 18px;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 40px;
 }
 
 .card {
-  padding: 42px;
-  border-radius: 34px;
+  border-radius: 32px;
+  padding: 40px 32px;
+  min-height: 360px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
 .card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
 }
 
 .card h3 {
-  margin-top: 140px;
-  font-size: 22px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 20px;
 }
 
 .card p {
-  margin-top: 12px;
   font-size: 15px;
-  color: rgba(255,255,255,0.88);
+  line-height: 1.5;
+  opacity: 0.95;
 }
 
-/* CARD COLORS */
-.red {
-  background: linear-gradient(135deg, #ff5f6d, #c7383f);
-}
-.purple {
-  background: linear-gradient(135deg, #9f7aea, #5b3aa8);
-}
-.green {
-  background: linear-gradient(135deg, #6ee7b7, #2f9e73);
-}
-
-/* SMOOTHIE GLASS */
+/* GLASS */
 .glass {
-  position: absolute;
-  top: 32px;
-  left: 50%;
-  transform: translateX(-50%);
   width: 70px;
-  height: 120px;
-  border-radius: 10px 10px 22px 22px;
-  box-shadow:
-    inset 0 0 0 2px rgba(255,255,255,0.25),
-    0 10px 25px rgba(0,0,0,0.35);
-  animation: sway 5s ease-in-out infinite;
+  height: 110px;
+  border-radius: 0 0 18px 18px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.5);
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.3);
 }
 
-/* LIQUID LOOK */
+/* COLORS */
 .strawberry {
-  background: linear-gradient(to top, #ff6b6b, #ffd6d6);
+  background: linear-gradient(135deg, #ff5f6d, #c81d4a);
 }
+
 .berry {
-  background: linear-gradient(to top, #a78bfa, #e9ddff);
+  background: linear-gradient(135deg, #9f7aea, #5b2dbd);
 }
+
 .green {
-  background: linear-gradient(to top, #4ade80, #d1fae5);
-}
-
-/* ANIMATION */
-@keyframes sway {
-  0%, 100% {
-    transform: translateX(-50%) rotate(-1.5deg);
-  }
-  50% {
-    transform: translateX(-50%) rotate(1.5deg);
-  }
-}
-
-/* PITCH */
-.pitch {
-  padding: 100px 80px;
-  max-width: 800px;
-}
-
-.pitch h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.pitch p {
-  color: #cbd5f5;
-  font-size: 17px;
-  line-height: 1.6;
+  background: linear-gradient(135deg, #6ee7b7, #2fb98f);
 }
