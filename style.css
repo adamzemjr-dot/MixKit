@@ -66,9 +66,11 @@ body {
 }
 
 .intro {
-  max-width: 800px;
+  max-width: 900px;
   color: #cbd5f5;
-  margin-bottom: 60px;
+  margin: 0 auto 40px auto;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .cards {
