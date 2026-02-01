@@ -1,115 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>MixKit</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      color: #f8fafc;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      padding: 40px 0;
+    }
+
+    nav button {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    nav button:hover {
+      background: rgba(255,255,255,0.18);
+      transform: translateY(-2px);
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 20px 40px;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      line-height: 1.1;
+      margin-bottom: 30px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #cbd5f5;
+    }
+
+    /* FLAVOURS */
+    .flavours {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+    }
+
+    .card {
+      position: relative;
+      height: 260px;
+      border-radius: 40px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      z-index: 2;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.85);
+      z-index: 2;
+    }
+
+    /* SMOOTHIE ICON */
+    .smoothie {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 64px;
+      opacity: 0.25;
+      animation: sway 4s ease-in-out infinite;
+    }
+
+    @keyframes sway {
+      0%   { transform: translate(-50%, -50%) rotate(-6deg); }
+      50%  { transform: translate(-50%, -50%) rotate(6deg); }
+      100% { transform: translate(-50%, -50%) rotate(-6deg); }
+    }
+
+    /* FLAVOUR COLORS */
+    .strawberry {
+      background: linear-gradient(160deg, #fb7185, #be123c);
+    }
+
+    .berry {
+      background: linear-gradient(160deg, #a78bfa, #5b21b6);
+    }
+
+    .green {
+      background: linear-gradient(160deg, #6ee7b7, #047857);
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <div class="logo">MixKit</div>
   <nav>
-    <button onclick="goTo('about')">About</button>
-    <button onclick="goTo('inside')">Inside</button>
-    <button onclick="goTo('flavours')">Flavours</button>
-    <button onclick="goTo('pitch')">Pitch</button>
+    <button>About</button>
+    <button>Inside</button>
+    <button>Flavours</button>
+    <button>Pitch</button>
   </nav>
-</header>
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>Healthy.<br>Simple.<br>Anywhere.</h1>
-
-    <p>
-      MixKit is a portable smoothie starter box built for modern life.
-      It removes friction from healthy eating by letting users blend
-      fresh smoothies anywhere — no kitchen, no cables, no compromise.
-    </p>
+  <section class="hero">
+    <h1>
+      Healthy.<br>
+      Simple.<br>
+      Anywhere.
+    </h1>
 
     <p>
-      Designed for students, athletes, and busy professionals,
-      MixKit turns nutrition into a habit, not a hassle.
+      MixKit is a thoughtfully designed smoothie starter box built for modern life.
+      Whether you’re heading to class, work, the gym, or a weekend trip, MixKit
+      gives you the freedom to enjoy real nutrition without the need for a kitchen,
+      cords, or complicated prep. Just blend, drink, and keep moving.
     </p>
-  </div>
+  </section>
 
-  <div class="hero-smoothie"></div>
-</section>
+  <section class="flavours">
 
-<section id="about">
-  <h2>What is MixKit?</h2>
-  <p>
-    Many people want to eat healthier, but convenience always wins.
-    MixKit bridges that gap by combining portability, power,
-    and simplicity into one compact box.
-  </p>
-</section>
-
-<section id="inside">
-  <h2>What’s Inside</h2>
-
-  <div class="card-grid">
-    <div class="card">
-      <h3>Portable Blender</h3>
+    <div class="card strawberry">
+      <div class="smoothie">🥤</div>
+      <h3>Strawberry Banana</h3>
       <p>
-        A rechargeable blender cup powerful enough for frozen fruit,
-        yet compact enough to fit in a backpack.
+        A smooth and comforting classic that balances natural sweetness with
+        creamy texture. Perfect for mornings or post-workout recovery.
       </p>
     </div>
 
-    <div class="card">
-      <h3>Extra Battery Pack</h3>
+    <div class="card berry">
+      <div class="smoothie">🫐</div>
+      <h3>Mixed Berry</h3>
       <p>
-        Built for long days, MixKit includes backup power so blending
-        is always possible.
+        A vibrant blend packed with antioxidants and bold flavour.
+        Designed for energy, focus, and a refreshing boost anytime.
       </p>
     </div>
 
-    <div class="card">
-      <h3>Recipe Book</h3>
+    <div class="card green">
+      <div class="smoothie">🥬</div>
+      <h3>Green Energy</h3>
       <p>
-        A curated guide featuring classic, tropical, and green
-        smoothies designed for energy and recovery.
+        A clean, balanced option made for sustained energy.
+        Light, refreshing, and ideal for days when you want to feel your best.
       </p>
     </div>
-  </div>
-</section>
 
-<section id="flavours">
-  <h2>Endless Flavours</h2>
-  <p>
-    From classic strawberry banana blends to tropical and green smoothies,
-    MixKit gives users freedom to experiment and personalise their nutrition.
-  </p>
+  </section>
 
-  <div class="flavour-grid">
-    <div class="flavour strawberry">
-      <div class="cup"></div>
-      <span>Strawberry Banana</span>
-    </div>
-
-    <div class="flavour berry">
-      <div class="cup"></div>
-      <span>Mixed Berry</span>
-    </div>
-
-    <div class="flavour green">
-      <div class="cup"></div>
-      <span>Green Energy</span>
-    </div>
-  </div>
-</section>
-
-<section id="pitch">
-  <h2>The Pitch</h2>
-  <p>
-    The global wellness market is growing rapidly, yet most solutions
-    sacrifice convenience. MixKit is positioned to scale by making
-    healthy choices effortless and accessible.
-  </p>
-</section>
-
-<script src="script.js"></script>
 </body>
 </html>
