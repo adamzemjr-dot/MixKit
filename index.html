@@ -3,204 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <title>MixKit</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-
-    body {
-      background: radial-gradient(circle at top, #0f172a, #020617);
-      color: #f8fafc;
-      min-height: 100vh;
-    }
-
-    /* NAV */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 40px;
-    }
-
-    nav h2 {
-      font-weight: 600;
-    }
-
-    nav .buttons {
-      display: flex;
-      gap: 14px;
-    }
-
-    nav button {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    nav button:hover {
-      background: rgba(255,255,255,0.18);
-      transform: translateY(-2px);
-    }
-
-    /* HERO TEXT */
-    .hero {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 60px 20px 20px;
-    }
-
-    .hero p {
-      max-width: 750px;
-      font-size: 17px;
-      line-height: 1.7;
-      color: #cbd5f5;
-    }
-
-    /* FLAVOURS */
-    .flavours {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-    }
-
-    .card {
-      position: relative;
-      height: 300px;
-      border-radius: 40px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding-bottom: 20px;
-      transition: transform 0.4s ease;
-      overflow: hidden;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .label {
-      font-size: 16px;
-      letter-spacing: 0.3px;
-    }
-
-    /* SMOOTHIE CUP */
-    .smoothie {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 70px;
-      height: 140px;
-      border-radius: 14px 14px 22px 22px;
-      transform: translate(-50%, -50%);
-      animation: sway 4s ease-in-out infinite;
-      box-shadow: 0 18px 30px rgba(0,0,0,0.35);
-      overflow: hidden;
-    }
-
-    /* liquid */
-    .smoothie::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 85%;
-      border-radius: 0 0 22px 22px;
-    }
-
-    /* straw */
-    .smoothie::after {
-      content: "";
-      position: absolute;
-      top: -26px;
-      left: 50%;
-      width: 6px;
-      height: 40px;
-      transform: translateX(-50%);
-      background: rgba(255,255,255,0.7);
-      border-radius: 3px;
-    }
-
-    @keyframes sway {
-      0%   { transform: translate(-50%, -50%) rotate(-5deg); }
-      50%  { transform: translate(-50%, -50%) rotate(5deg); }
-      100% { transform: translate(-50%, -50%) rotate(-5deg); }
-    }
-
-    /* FLAVOUR COLORS */
-    .strawberry {
-      background: linear-gradient(160deg, #fb7185, #be123c);
-    }
-    .strawberry .smoothie::before {
-      background: linear-gradient(#fecaca, #f43f5e);
-    }
-
-    .berry {
-      background: linear-gradient(160deg, #a78bfa, #5b21b6);
-    }
-    .berry .smoothie::before {
-      background: linear-gradient(#ddd6fe, #7c3aed);
-    }
-
-    .green {
-      background: linear-gradient(160deg, #6ee7b7, #047857);
-    }
-    .green .smoothie::before {
-      background: linear-gradient(#bbf7d0, #22c55e);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <nav>
-    <h2>MixKit</h2>
-    <div class="buttons">
-      <button>About</button>
-      <button>Inside</button>
-      <button>Flavours</button>
-      <button>Pitch</button>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">MixKit</div>
+    <div class="nav-links">
+      <button onclick="scrollToSection('about')">About</button>
+      <button onclick="scrollToSection('inside')">Inside</button>
+      <button onclick="scrollToSection('flavours')">Flavours</button>
+      <button onclick="scrollToSection('pitch')">Pitch</button>
     </div>
   </nav>
 
-  <section class="hero">
+  <!-- HERO -->
+  <section class="hero" id="about">
+    <h1>Healthy.<br>Simple.<br>Anywhere.</h1>
     <p>
-      From classic strawberry banana blends to tropical and green smoothies,
-      MixKit gives users the freedom to experiment and personalise their nutrition.
-      Designed for busy lifestyles, MixKit removes the friction between wanting
-      to eat well and actually doing it.
+      MixKit is a portable smoothie starter box built for modern life.
+      Whether you're rushing to school, training after workouts, or
+      just want better nutrition without the mess — MixKit makes it effortless.
     </p>
   </section>
 
-  <section class="flavours">
+  <!-- FLAVOURS -->
+  <section class="flavours" id="flavours">
+    <p class="intro">
+      From classic strawberry banana blends to tropical and green smoothies,
+      MixKit gives users freedom to experiment and personalise their nutrition.
+    </p>
 
-    <div class="card strawberry">
-      <div class="smoothie"></div>
-      <div class="label">Strawberry Banana</div>
+    <div class="cards">
+      <div class="card red">
+        <div class="glass strawberry"></div>
+        <h3>Strawberry Banana</h3>
+        <p>
+          A smooth and comforting classic combining ripe strawberries
+          with creamy banana. Naturally sweet, satisfying, and perfect
+          for mornings or post-workout recovery.
+        </p>
+      </div>
+
+      <div class="card purple">
+        <div class="glass berry"></div>
+        <h3>Mixed Berry</h3>
+        <p>
+          A vibrant antioxidant-rich blend packed with blueberries,
+          raspberries, and blackberries. Bold flavour with a refreshing
+          boost of energy and focus.
+        </p>
+      </div>
+
+      <div class="card green">
+        <div class="glass green"></div>
+        <h3>Green Energy</h3>
+        <p>
+          A clean, balanced smoothie featuring spinach, apple, and
+          citrus notes. Light, refreshing, and designed for sustained
+          energy throughout the day.
+        </p>
+      </div>
     </div>
-
-    <div class="card berry">
-      <div class="smoothie"></div>
-      <div class="label">Mixed Berry</div>
-    </div>
-
-    <div class="card green">
-      <div class="smoothie"></div>
-      <div class="label">Green Energy</div>
-    </div>
-
   </section>
 
+  <script src="script.js"></script>
 </body>
 </html>
