@@ -1,140 +1,214 @@
-/* BASE */
+/* =========================
+   Global Reset
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
 }
-
-html { scroll-behavior: smooth; }
 
 body {
-  background: radial-gradient(circle at top, #0b1224, #020617);
-  color: white;
+  background: radial-gradient(circle at top, #0c1220, #060914);
+  color: #ffffff;
+  line-height: 1.6;
 }
 
-/* NAV */
+/* =========================
+   Navbar
+========================= */
 nav {
   position: sticky;
   top: 0;
-  z-index: 100;
-  background: rgba(2, 6, 23, 0.85);
-  backdrop-filter: blur(10px);
+  z-index: 1000;
+  background: rgba(6, 9, 20, 0.8);
+  backdrop-filter: blur(20px);
+  padding: 20px 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
 }
 
-nav button {
-  background: #0f172a;
-  border: 1px solid #1e293b;
-  color: white;
-  padding: 10px 16px;
-  margin-left: 10px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: 0.3s;
+nav h1 {
+  font-size: 22px;
+  font-weight: 700;
 }
 
-nav button.active,
-nav button:hover {
-  background: #1e293b;
+nav ul {
+  display: flex;
+  gap: 14px;
+  list-style: none;
 }
 
-/* SECTIONS */
-section {
-  padding: 120px 60px;
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  transition: background 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero {
+  padding: 140px 80px 120px;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .hero h2 {
-  font-size: 72px;
+  font-size: 68px;
+  font-weight: 800;
   line-height: 1.05;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 
-.hero p, .info p {
+.hero p {
   max-width: 520px;
   font-size: 18px;
-  line-height: 1.6;
-  color: #cbd5f5;
+  opacity: 0.85;
 }
 
-.info h3, .section-header h3 {
+/* =========================
+   Section Header
+========================= */
+.section-header {
+  padding: 80px 80px 60px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.section-header h3 {
   font-size: 42px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
-/* FLAVOURS */
-.cards {
+.section-header p {
+  opacity: 0.8;
+  max-width: 520px;
+}
+
+/* =========================
+   Flavours Grid
+========================= */
+.flavours {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 36px;
+  padding: 0 80px 120px;
+  max-width: 1400px;
+  margin: auto;
 }
 
+/* =========================
+   Flavour Cards
+========================= */
 .card {
-  padding: 40px 30px;
-  border-radius: 32px;
+  border-radius: 36px;
+  padding: 40px 34px;
+  min-height: 440px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
   text-align: center;
-  transition: transform 0.4s, box-shadow 0.4s;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  transform: translateY(-10px);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
 }
 
-/* COLORS */
-.strawberry { background: linear-gradient(180deg, #fb7185, #be123c); }
-.berry { background: linear-gradient(180deg, #a78bfa, #6d28d9); }
-.green { background: linear-gradient(180deg, #6ee7b7, #059669); }
-
-/* GLASS */
+/* =========================
+   Glass + Fill
+========================= */
 .glass {
-  width: 70px;
-  height: 120px;
-  margin: 0 auto;
+  width: 72px;
+  height: 130px;
   border-radius: 18px;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.18);
   position: relative;
   overflow: hidden;
+  margin-bottom: 26px;
 }
 
-.liquid {
+.fill {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 0%;
-  transition: height 1.5s ease;
+  transition: height 1.2s ease;
+  border-radius: 18px;
 }
 
-.card:hover .liquid { height: 85%; }
-
-/* FLOAT ANIMATION */
-.float {
-  animation: float 6s ease-in-out infinite;
+.card:hover .fill {
+  height: 75%;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+/* =========================
+   Card Text
+========================= */
+.card h4 {
+  font-size: 22px;
+  margin-bottom: 12px;
 }
 
-/* SCROLL REVEAL */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 1s ease;
+.card p {
+  font-size: 15px;
+  opacity: 0.9;
+  line-height: 1.5;
+  max-width: 260px;
 }
 
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* =========================
+   Card Variants
+========================= */
+.strawberry {
+  background: linear-gradient(145deg, #ff6b81, #c71f3d);
 }
 
-/* FOOTER */
-footer {
-  padding: 40px;
-  text-align: center;
-  color: #94a3b8;
+.strawberry .fill {
+  background: linear-gradient(180deg, #ffd0d8, #ff5a6f);
+}
+
+.berry {
+  background: linear-gradient(145deg, #9c7af1, #5b3dbd);
+}
+
+.berry .fill {
+  background: linear-gradient(180deg, #e4d8ff, #a88cff);
+}
+
+.green {
+  background: linear-gradient(145deg, #5bd7a3, #1f8f67);
+}
+
+.green .fill {
+  background: linear-gradient(180deg, #d9ffe9, #5fe3a1);
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 900px) {
+  .hero h2 {
+    font-size: 48px;
+  }
+
+  .hero,
+  .section-header,
+  .flavours {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
