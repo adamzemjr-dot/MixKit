@@ -29,6 +29,11 @@ nav {
   align-items: center;
 }
 
+.logo {
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .nav-links a {
   margin-left: 12px;
   padding: 8px 16px;
@@ -39,6 +44,7 @@ nav {
   transition: 0.2s;
 }
 
+.nav-links a.active,
 .nav-links a:hover {
   background: rgba(255,255,255,0.25);
 }
@@ -55,7 +61,6 @@ section {
 
 .hero h1 {
   font-size: 64px;
-  line-height: 1.1;
 }
 
 .hero p {
@@ -74,6 +79,19 @@ h2 {
   margin-bottom: 48px;
 }
 
+/* WHY */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.why-card {
+  background: rgba(255,255,255,0.08);
+  padding: 32px;
+  border-radius: 24px;
+}
+
 /* FLAVOURS */
 .flavour-grid {
   display: grid;
@@ -82,30 +100,28 @@ h2 {
 }
 
 .flavour-card {
-  border-radius: 32px;
-  padding: 32px;
-  min-height: 420px;
   position: relative;
+  padding: 32px;
+  border-radius: 32px;
+  min-height: 440px;
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .flavour-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+}
+
+.tag {
+  font-size: 12px;
+  opacity: 0.7;
 }
 
 .flavour-card h3 {
   margin-top: 240px;
-  font-size: 22px;
 }
 
-.flavour-card p {
-  margin-top: 12px;
-  opacity: 0.9;
-}
-
-/* COLORS */
 .red { background: linear-gradient(180deg, #ff6b7a, #c81d3a); }
 .purple { background: linear-gradient(180deg, #a78bfa, #6d3fd3); }
 .green { background: linear-gradient(180deg, #7dd3a6, #1f9d6e); }
@@ -121,11 +137,6 @@ h2 {
   transform: translateX(-50%);
   background: rgba(255,255,255,0.25);
   overflow: hidden;
-  transition: transform 0.4s ease;
-}
-
-.flavour-card:hover .glass {
-  transform: translateX(-50%) rotate(-3deg);
 }
 
 .glass::after {
@@ -145,9 +156,38 @@ h2 {
 .fill-purple::after { background: #d8c9ff; }
 .fill-green::after { background: #a7f3d0; }
 
+/* ROUTINE */
+.routine {
+  text-align: center;
+  opacity: 0.85;
+}
+
+/* PITCH */
+.audience {
+  margin-top: 24px;
+  font-weight: 600;
+}
+
+.vision {
+  margin-top: 16px;
+  opacity: 0.7;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
 /* MOBILE */
 @media (max-width: 900px) {
-  .flavour-grid {
+  .flavour-grid, .why-grid {
     grid-template-columns: 1fr;
   }
 }
