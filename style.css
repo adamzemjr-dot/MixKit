@@ -17,7 +17,6 @@ header {
   padding: 16px 48px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   backdrop-filter: blur(10px);
   z-index: 100;
 }
@@ -26,7 +25,6 @@ nav a {
   color: #cbd5f5;
   margin-left: 20px;
   text-decoration: none;
-  padding-bottom: 4px;
 }
 
 nav a.active {
@@ -40,15 +38,15 @@ section {
 
 .hero h1 {
   font-size: 64px;
-  line-height: 1.1;
   margin-bottom: 24px;
 }
 
 .section-sub {
   color: #b6c2ff;
-  margin: 12px 0 40px;
+  margin: 16px 0 40px;
 }
 
+/* INFO */
 .info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -59,24 +57,24 @@ section {
   background: rgba(255,255,255,0.05);
   padding: 28px;
   border-radius: 18px;
-  transition: transform 0.4s ease, background 0.4s ease;
+  transition: transform 0.3s ease;
 }
 
 .info-card:hover {
   transform: translateY(-6px);
-  background: rgba(255,255,255,0.08);
 }
 
+/* FLAVORS */
 .flavor-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 32px;
 }
 
 .flavor-card {
+  text-align: center;
   padding: 32px;
   border-radius: 28px;
-  text-align: center;
   transition: transform 0.4s ease;
 }
 
@@ -95,26 +93,31 @@ section {
   overflow: hidden;
 }
 
+/* LIQUID */
 .liquid {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 0%;
-  transition: height 0.7s cubic-bezier(.22,1,.36,1);
+  border-radius: 0 0 24px 24px;
+  transition: height 0.9s cubic-bezier(.22,1,.36,1);
 }
 
+/* HOVER → FILL TO 75% */
 .flavor-card:hover .liquid {
-  height: 100%;
-  animation: wave 1.8s ease-in-out infinite;
+  height: 75%;
+  animation: slosh 2.2s ease-in-out infinite;
 }
 
-@keyframes wave {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+/* SLOSH ANIMATION */
+@keyframes slosh {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-4px); }
+  60%  { transform: translateY(2px); }
   100% { transform: translateY(0); }
 }
 
-/* FLAVORS */
+/* FLAVOR COLORS */
 .strawberry {
   background: linear-gradient(180deg, #fb7185, #e11d48);
 }
