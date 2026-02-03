@@ -1,41 +1,112 @@
-// Smooth scroll
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    document.querySelector(link.getAttribute('href'))
-      .scrollIntoView({ behavior: 'smooth' });
-  });
-});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MixKit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-// Active nav
-const sections = document.querySelectorAll("section, footer");
-const navLinks = document.querySelectorAll(".nav-links a");
+<header class="navbar">
+  <div class="logo">MixKit</div>
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#inside">Inside</a>
+    <a href="#flavours">Flavours</a>
+    <a href="#pitch">Pitch</a>
+  </nav>
+</header>
 
-window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach(section => {
-    if (scrollY >= section.offsetTop - 200) {
-      current = section.id;
-    }
-  });
+<section id="about" class="hero">
+  <h1>Healthy.<br>Simple.<br>Anywhere.</h1>
+  <p>
+    MixKit is built for people who want real nutrition without slowing down.
+    No prep, no mess — just blend and go wherever life takes you.
+  </p>
+</section>
 
-  navLinks.forEach(link => {
-    link.classList.toggle(
-      "active",
-      link.getAttribute("href") === `#${current}`
-    );
-  });
-});
+<section id="inside" class="section">
+  <h2>What’s Inside</h2>
+  <p class="section-text">
+    Each MixKit box removes friction from healthy eating by giving you
+    everything you need in one simple system.
+  </p>
 
-// INFO CARD SCROLL ANIMATION
-const cards = document.querySelectorAll(".info-card");
+  <div class="inside-grid">
+    <div class="info-card">
+      <h3>Portable Blender</h3>
+      <p>
+        Compact, powerful, and built to handle frozen ingredients
+        with consistent, smooth results.
+      </p>
+    </div>
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, { threshold: 0.3 });
+    <div class="info-card">
+      <h3>Rechargeable Battery</h3>
+      <p>
+        Long-lasting power designed for daily blending — no disposable
+        batteries, no stress.
+      </p>
+    </div>
 
-cards.forEach(card => observer.observe(card));
+    <div class="info-card">
+      <h3>Recipe Guide</h3>
+      <p>
+        Balanced blends created to support energy, focus, and recovery
+        without guesswork.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="flavours" class="section">
+  <h2>Signature Blends</h2>
+  <p class="section-text">
+    Designed with purpose. Hover to see each blend come to life.
+  </p>
+
+  <div class="flavour-grid">
+    <div class="flavour-card strawberry">
+      <div class="cup">
+        <div class="liquid strawberry-fill"></div>
+        <div class="glass-highlight"></div>
+      </div>
+      <h3>Strawberry Banana</h3>
+      <p>Smooth, comforting energy — perfect for mornings.</p>
+    </div>
+
+    <div class="flavour-card berry">
+      <div class="cup">
+        <div class="liquid berry-fill"></div>
+        <div class="glass-highlight"></div>
+      </div>
+      <h3>Mixed Berry</h3>
+      <p>Antioxidant-rich for clarity and sustained focus.</p>
+    </div>
+
+    <div class="flavour-card green">
+      <div class="cup">
+        <div class="liquid green-fill"></div>
+        <div class="glass-highlight"></div>
+      </div>
+      <h3>Green Energy</h3>
+      <p>Light, refreshing fuel with no crash.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PITCH IS BACK -->
+<section id="pitch" class="section pitch">
+  <h2>Blend Better. Anywhere.</h2>
+  <p>
+    MixKit bridges the gap between wanting to eat well and actually doing it.
+    Designed for real life, real schedules, and real energy needs —
+    no compromises required.
+  </p>
+  <span class="footer-year">© 2026 MixKit</span>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
