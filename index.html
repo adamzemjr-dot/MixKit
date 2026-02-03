@@ -2,97 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mixkit</title>
+  <title>MixKit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="nav">
-  <div class="logo">Mixkit</div>
-  <nav>
-    <a href="#home" class="nav-link active">Home</a>
-    <a href="#inside" class="nav-link">Inside</a>
-    <a href="#flavors" class="nav-link">Flavors</a>
-    <a href="#pitch" class="nav-link">Pitch</a>
+<header class="navbar">
+  <div class="logo">MixKit</div>
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#inside">Inside</a>
+    <a href="#flavours">Flavours</a>
+    <a href="#pitch">Pitch</a>
   </nav>
 </header>
 
-<section id="home" class="hero">
-  <h1>Smoothies, Simplified.</h1>
+<section id="about" class="hero">
+  <h1>Healthy.<br>Simple.<br>Anywhere.</h1>
   <p>
-    Mixkit is an all-in-one smoothie experience designed for modern life.
-    Fresh, balanced blends in seconds — no mess, no prep, no stress.
+    MixKit is a portable smoothie system designed for modern life.
+    Blend real ingredients, anywhere, with zero friction.
   </p>
 </section>
 
 <section id="inside" class="section">
-  <h2>What’s Inside the Mixkit Box</h2>
-  <p class="section-desc">
-    Everything is thoughtfully designed to make blending fast, simple,
-    and enjoyable — even if you’ve never made a smoothie before.
+  <h2>What’s Inside</h2>
+  <p class="section-text">
+    Everything you need to make consistent, nutritious smoothies —
+    no prep, no cleanup, no wasted time.
   </p>
 
-  <div class="info-cards">
+  <div class="inside-grid">
     <div class="info-card">
       <h3>Portable Blender</h3>
-      <p>
-        A sleek, rechargeable blender powerful enough to crush ice and
-        frozen fruit while staying quiet and lightweight.
-      </p>
+      <p>Compact, powerful, and built for daily use.</p>
     </div>
     <div class="info-card">
-      <h3>Swap-Out Batteries</h3>
-      <p>
-        Extra batteries mean you’re never stuck without power. One charge
-        blends multiple smoothies.
-      </p>
+      <h3>Rechargeable Battery</h3>
+      <p>Long-lasting power designed for real schedules.</p>
     </div>
     <div class="info-card">
-      <h3>Recipe Book</h3>
-      <p>
-        Beginner-friendly recipes plus advanced blends — from energy boosts
-        to dessert-style smoothies.
-      </p>
+      <h3>Recipe Guide</h3>
+      <p>Balanced blends for energy, focus, and recovery.</p>
     </div>
   </div>
 </section>
 
-<section id="flavors" class="section flavors">
-  <h2>Signature Smoothie Flavors</h2>
-  <p class="section-desc">
-    Each Mixkit flavor is crafted to taste incredible while staying balanced,
-    refreshing, and easy to customize.
-  </p>
+<section id="flavours" class="section">
+  <h2>Signature Blends</h2>
+  <p class="section-text">Hover to see each blend come together.</p>
 
-  <div class="flavor-grid">
-    <div class="flavor-card strawberry">
-      <div class="cup"><div class="liquid"></div></div>
+  <div class="flavour-grid">
+
+    <!-- STRAWBERRY -->
+    <div class="flavour-card strawberry">
+      <div class="pour-scene">
+        <div class="cup source">
+          <div class="liquid"></div>
+        </div>
+
+        <div class="stream"></div>
+
+        <div class="cup dest">
+          <div class="liquid"></div>
+        </div>
+      </div>
+
       <h3>Strawberry Banana</h3>
-      <p>Smooth, creamy, and naturally sweet — the perfect everyday blend.</p>
+      <p>Comforting, smooth energy to start your day.</p>
     </div>
 
-    <div class="flavor-card mango">
-      <div class="cup"><div class="liquid"></div></div>
-      <h3>Mango Tropical</h3>
-      <p>Bright and refreshing with a tropical feel in every sip.</p>
+    <!-- BERRY -->
+    <div class="flavour-card berry">
+      <div class="pour-scene">
+        <div class="cup source">
+          <div class="liquid"></div>
+        </div>
+
+        <div class="stream"></div>
+
+        <div class="cup dest">
+          <div class="liquid"></div>
+        </div>
+      </div>
+
+      <h3>Mixed Berry</h3>
+      <p>Antioxidant-rich fuel for focus and clarity.</p>
     </div>
 
-    <div class="flavor-card berry">
-      <div class="cup"><div class="liquid"></div></div>
-      <h3>Berry Blast</h3>
-      <p>Bold berries blended into a rich, antioxidant-packed mix.</p>
+    <!-- GREEN -->
+    <div class="flavour-card green">
+      <div class="pour-scene">
+        <div class="cup source">
+          <div class="liquid"></div>
+        </div>
+
+        <div class="stream"></div>
+
+        <div class="cup dest">
+          <div class="liquid"></div>
+        </div>
+      </div>
+
+      <h3>Green Energy</h3>
+      <p>Clean energy with no crash.</p>
     </div>
+
   </div>
 </section>
 
 <section id="pitch" class="section pitch">
   <h2>Blend Better. Anywhere.</h2>
   <p>
-    Mixkit removes the friction between wanting to eat well and actually
-    doing it — at home, the gym, work, or on the go.
+    MixKit removes the friction between wanting to eat well
+    and actually doing it — every single day.
   </p>
-  <span class="year">© 2026 Mixkit</span>
+  <span class="footer-year">© 2026 MixKit</span>
 </section>
 
 <script src="script.js"></script>
