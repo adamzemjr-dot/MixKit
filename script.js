@@ -1,15 +1,15 @@
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
+const links = document.querySelectorAll("nav a");
 
 window.addEventListener("scroll", () => {
   let current = "";
-
-  sections.forEach(section => {
-    const top = section.offsetTop - 140;
-    if (scrollY >= top) current = section.id;
+  sections.forEach(sec => {
+    if (scrollY >= sec.offsetTop - 150) {
+      current = sec.id;
+    }
   });
 
-  navLinks.forEach(link => {
+  links.forEach(link => {
     link.classList.remove("active");
     if (link.getAttribute("href") === `#${current}`) {
       link.classList.add("active");
