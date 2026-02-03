@@ -8,7 +8,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // Active nav
-const sections = document.querySelectorAll("section, footer");
+const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll", () => {
@@ -27,14 +27,11 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// INFO CARD SCROLL ANIMATION
+// Info cards animation
 const cards = document.querySelectorAll(".info-card");
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
+    if (entry.isIntersecting) entry.target.classList.add("show");
   });
 }, { threshold: 0.3 });
 
