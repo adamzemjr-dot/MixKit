@@ -1,214 +1,148 @@
-/* =========================
-   Global Reset
-========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
 }
 
 body {
-  background: radial-gradient(circle at top, #0c1220, #060914);
-  color: #ffffff;
-  line-height: 1.6;
+  background: radial-gradient(circle at top, #0b132b, #020617);
+  color: white;
 }
 
-/* =========================
-   Navbar
-========================= */
+/* NAV */
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
+  background: rgba(5,10,25,0.85);
+  backdrop-filter: blur(12px);
   z-index: 1000;
-  background: rgba(6, 9, 20, 0.8);
-  backdrop-filter: blur(20px);
-  padding: 20px 48px;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-nav h1 {
-  font-size: 22px;
-  font-weight: 700;
-}
-
-nav ul {
-  display: flex;
-  gap: 14px;
-  list-style: none;
-}
-
-nav a {
-  text-decoration: none;
-  color: #ffffff;
-  padding: 10px 18px;
+.nav-links a {
+  margin-left: 12px;
+  padding: 8px 16px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  transition: background 0.3s, transform 0.3s;
+  text-decoration: none;
+  color: white;
+  background: rgba(255,255,255,0.1);
+  transition: 0.2s;
 }
 
-nav a:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-2px);
+.nav-links a:hover {
+  background: rgba(255,255,255,0.25);
 }
 
-/* =========================
-   Hero Section
-========================= */
-.hero {
-  padding: 140px 80px 120px;
-  max-width: 1400px;
+/* SECTIONS */
+section {
+  padding: 140px 24px;
+}
+
+.container {
+  max-width: 1200px;
   margin: auto;
 }
 
-.hero h2 {
-  font-size: 68px;
-  font-weight: 800;
-  line-height: 1.05;
-  margin-bottom: 28px;
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
 }
 
 .hero p {
   max-width: 520px;
-  font-size: 18px;
+  margin-top: 24px;
   opacity: 0.85;
 }
 
-/* =========================
-   Section Header
-========================= */
-.section-header {
-  padding: 80px 80px 60px;
-  max-width: 1400px;
-  margin: auto;
+h2 {
+  font-size: 40px;
+  margin-bottom: 16px;
 }
 
-.section-header h3 {
-  font-size: 42px;
-  margin-bottom: 14px;
+.subtitle {
+  opacity: 0.7;
+  margin-bottom: 48px;
 }
 
-.section-header p {
-  opacity: 0.8;
-  max-width: 520px;
-}
-
-/* =========================
-   Flavours Grid
-========================= */
-.flavours {
+/* FLAVOURS */
+.flavour-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 36px;
-  padding: 0 80px 120px;
-  max-width: 1400px;
-  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
-/* =========================
-   Flavour Cards
-========================= */
-.card {
-  border-radius: 36px;
-  padding: 40px 34px;
-  min-height: 440px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  text-align: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
-}
-
-/* =========================
-   Glass + Fill
-========================= */
-.glass {
-  width: 72px;
-  height: 130px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.18);
+.flavour-card {
+  border-radius: 32px;
+  padding: 32px;
+  min-height: 400px;
   position: relative;
   overflow: hidden;
-  margin-bottom: 26px;
+  transition: transform 0.3s ease;
 }
 
-.fill {
+.flavour-card:hover {
+  transform: translateY(-8px);
+}
+
+.flavour-card h3 {
+  margin-top: 230px;
+  font-size: 22px;
+}
+
+.flavour-card p {
+  margin-top: 12px;
+  opacity: 0.85;
+}
+
+/* COLORS */
+.red { background: linear-gradient(180deg, #ff6b7a, #c81d3a); }
+.purple { background: linear-gradient(180deg, #a78bfa, #6d3fd3); }
+.green { background: linear-gradient(180deg, #7dd3a6, #1f9d6e); }
+
+/* GLASS */
+.glass {
+  width: 90px;
+  height: 170px;
+  border-radius: 20px;
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.2);
+  overflow: hidden;
+}
+
+.glass::after {
+  content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 0%;
-  transition: height 1.2s ease;
-  border-radius: 18px;
+  height: 40%;
+  animation: fill 4s ease-in-out infinite alternate;
 }
 
-.card:hover .fill {
-  height: 75%;
+.fill-red::after { background: #ffb3ba; }
+.fill-purple::after { background: #d8c9ff; }
+.fill-green::after { background: #a7f3d0; }
+
+@keyframes fill {
+  from { height: 30%; }
+  to { height: 85%; }
 }
 
-/* =========================
-   Card Text
-========================= */
-.card h4 {
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.card p {
-  font-size: 15px;
-  opacity: 0.9;
-  line-height: 1.5;
-  max-width: 260px;
-}
-
-/* =========================
-   Card Variants
-========================= */
-.strawberry {
-  background: linear-gradient(145deg, #ff6b81, #c71f3d);
-}
-
-.strawberry .fill {
-  background: linear-gradient(180deg, #ffd0d8, #ff5a6f);
-}
-
-.berry {
-  background: linear-gradient(145deg, #9c7af1, #5b3dbd);
-}
-
-.berry .fill {
-  background: linear-gradient(180deg, #e4d8ff, #a88cff);
-}
-
-.green {
-  background: linear-gradient(145deg, #5bd7a3, #1f8f67);
-}
-
-.green .fill {
-  background: linear-gradient(180deg, #d9ffe9, #5fe3a1);
-}
-
-/* =========================
-   Responsive
-========================= */
+/* MOBILE */
 @media (max-width: 900px) {
-  .hero h2 {
-    font-size: 48px;
-  }
-
-  .hero,
-  .section-header,
-  .flavours {
-    padding-left: 40px;
-    padding-right: 40px;
+  .flavour-grid {
+    grid-template-columns: 1fr;
   }
 }
