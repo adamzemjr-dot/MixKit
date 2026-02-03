@@ -12,14 +12,14 @@
 <nav>
   <h1>MixKit</h1>
   <div class="links">
-    <button onclick="goTo('about')">About</button>
-    <button onclick="goTo('inside')">Inside</button>
-    <button onclick="goTo('flavours')">Flavours</button>
-    <button onclick="goTo('pitch')">Pitch</button>
+    <button data-link="about" onclick="goTo('about')">About</button>
+    <button data-link="inside" onclick="goTo('inside')">Inside</button>
+    <button data-link="flavours" onclick="goTo('flavours')">Flavours</button>
+    <button data-link="pitch" onclick="goTo('pitch')">Pitch</button>
   </div>
 </nav>
 
-<section class="hero" id="about">
+<section class="hero reveal" id="about">
   <h2>Healthy.<br>Simple.<br>Anywhere.</h2>
   <p>
     MixKit is a portable smoothie system designed for busy people who
@@ -27,62 +27,56 @@
   </p>
 </section>
 
-<section class="info" id="inside">
+<section class="info reveal" id="inside">
   <h3>What’s Inside</h3>
   <p>
     Every MixKit box includes a compact blender cup, long-lasting batteries,
-    and a curated recipe guide. It’s built to make smoothies effortless
-    whether you're at home, school, or on the move.
+    and a curated recipe guide. Designed to remove friction and help
+    healthy habits stick.
   </p>
 </section>
 
-<section class="flavours" id="flavours">
+<section class="flavours reveal" id="flavours">
   <div class="section-header">
     <h3>Signature Blends</h3>
     <p>
-      Carefully crafted flavours made to taste amazing while supporting
-      your energy, focus, and health goals.
+      Balanced, delicious flavours made to fuel your day without slowing
+      you down.
     </p>
   </div>
 
   <div class="cards">
-    <div class="card strawberry">
+    <div class="card strawberry float">
       <div class="glass"><div class="liquid"></div></div>
       <h4>Strawberry Banana</h4>
-      <p>
-        Smooth, creamy, and naturally sweet. A comforting classic that’s
-        perfect for mornings or post-workout recovery.
-      </p>
+      <p>Smooth, creamy, and naturally sweet. A comforting classic.</p>
     </div>
 
-    <div class="card berry">
+    <div class="card berry float">
       <div class="glass"><div class="liquid"></div></div>
       <h4>Mixed Berry</h4>
-      <p>
-        A bold mix of berries packed with antioxidants to keep you focused,
-        energised, and refreshed throughout the day.
-      </p>
+      <p>Bold flavour packed with antioxidants for focus and energy.</p>
     </div>
 
-    <div class="card green">
+    <div class="card green float">
       <div class="glass"><div class="liquid"></div></div>
       <h4>Green Energy</h4>
-      <p>
-        A clean, balanced blend designed for sustained energy using
-        nutrient-dense greens and fruits.
-      </p>
+      <p>Clean, balanced nutrition designed for sustained performance.</p>
     </div>
   </div>
 </section>
 
-<section class="info" id="pitch">
+<section class="info reveal" id="pitch">
   <h3>Why MixKit?</h3>
   <p>
-    MixKit bridges the gap between healthy intentions and daily habits.
-    It removes friction, saves time, and makes nutrition something you
-    actually enjoy sticking with.
+    MixKit turns good intentions into real habits. It saves time, removes
+    friction, and makes healthy choices easy and enjoyable.
   </p>
 </section>
+
+<footer>
+  <p>© 2026 MixKit · Designed for modern life</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
