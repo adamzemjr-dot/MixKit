@@ -1,15 +1,14 @@
-// Smooth scroll
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', e => {
+// Smooth scroll + nav active
+const links = document.querySelectorAll(".nav-links a");
+const sections = document.querySelectorAll("section");
+
+links.forEach(link => {
+  link.addEventListener("click", e => {
     e.preventDefault();
-    document.querySelector(link.getAttribute('href'))
-      .scrollIntoView({ behavior: 'smooth' });
+    document.querySelector(link.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
   });
 });
-
-// Active nav
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll", () => {
   let current = "";
@@ -19,7 +18,7 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  navLinks.forEach(link => {
+  links.forEach(link => {
     link.classList.toggle(
       "active",
       link.getAttribute("href") === `#${current}`
@@ -27,12 +26,12 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Info cards animation
+// Info card reveal
 const cards = document.querySelectorAll(".info-card");
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add("show");
   });
-}, { threshold: 0.3 });
+});
 
 cards.forEach(card => observer.observe(card));
